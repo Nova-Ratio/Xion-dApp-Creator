@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  .gradient-background {
+    @apply main-gradient transition-all delay-300;
+  }
+  .xion .ui-backdrop-blur-lg {
+    @apply !bg-black/10 !backdrop-blur-sm;
+  }
+  .xion .ui-bg-modal-overlay {
+    background-image: none !important;
+    @apply !bg-black/10 !important;
+  }
+  .auditCard-text {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 119%; /* 47.6px */
+    letter-spacing: -1.6px;
+  }
+}
