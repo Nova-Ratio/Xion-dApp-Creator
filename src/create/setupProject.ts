@@ -5,7 +5,7 @@ import { APPS_ENGINE_DIR } from "../utils/app"
 import type { Project } from "./getUserInput"
 import { experiences } from "./experiences"
 
-const CONTRACTS_REPO = "git@github.com:findolor/xion-dapp-kickstarter.git"
+const CONTRACTS_REPO = "git@github.com:Nova-Ratio/xion-dapp-kickstarter.git"
 
 async function execAsync(command: string, options = {}) {
   return new Promise((resolve, reject) => {
