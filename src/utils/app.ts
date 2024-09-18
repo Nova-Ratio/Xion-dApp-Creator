@@ -3,7 +3,7 @@ import * as fs from "fs"
 import * as path from "path"
 import { rimraf } from "rimraf"
 
-export const APPS_ENGINE_DIR = `temp-xion-dapp-kickstarter`
+export const APPS_ENGINE_DIR = `temp-Xion-dApp-Creator`
 
 export const getAppDir = () => {
   return APPS_ENGINE_DIR + "/template"
