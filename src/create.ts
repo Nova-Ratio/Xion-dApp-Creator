@@ -5,8 +5,14 @@ import { getProjectDir } from "./utils/dir"
 import { checkProjectDir } from "./create/checkProjectDir"
 import { setupProject } from "./create/setupProject"
 import { outro } from "./create/outro"
+import { textSync } from "figlet"
+import * as color from "picocolors"
 
 export const createProject = async () => {
+  console.log(
+    color.green(textSync("Xion Network", { horizontalLayout: "fitted" }))
+  )
+
   await checkMinimumRequirements()
 
   prompts.intro("Welcome to Xion Network dApp Kickstarter! 🚀")
