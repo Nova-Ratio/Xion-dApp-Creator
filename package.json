@@ -2,10 +2,11 @@
   "name": "xion-dapp-kickstarter",
   "module": "index.ts",
   "type": "module",
+  "main": "dist/index.js",
   "scripts": {
     "dev": "bun run src/index.ts",
     "start": "bun run src/index.ts",
-    "build": "bun build src/index.ts"
+    "build": "bun build ./src/index.ts --target node --outdir dist --outfile dist/index.mjs"
   },
   "devDependencies": {
     "@types/bun": "latest",

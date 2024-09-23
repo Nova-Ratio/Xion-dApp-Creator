@@ -50,7 +50,7 @@ export async function setupProject(projectDir: string, project: Project) {
 
     await execAsync(`mkdir ${projectDir}`)
     await execCommand("git init")
-    await execAsync(`git clone -b add_scripts ${CONTRACTS_REPO} ${APPS_ENGINE_DIR}`, {
+    await execAsync(`git clone -b master ${CONTRACTS_REPO} ${APPS_ENGINE_DIR}`, {
       cwd: projectDir,
     })
 
